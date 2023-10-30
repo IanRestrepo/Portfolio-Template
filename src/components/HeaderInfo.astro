@@ -1,0 +1,37 @@
+---
+import Cta from './Cta.astro';
+import Info from './Info.astro'
+     interface Props {
+         photo: string,
+         name: string,
+         age: number,
+         profession: string,
+         seniority: string
+     }
+
+     const { photo, name, age, profession, seniority } = Astro.props;
+---
+<div class=" flex justify-center">
+    <div class="text-center ">
+        <img src={ photo } alt={name} class="rounded-full border-2 border-white max-w-[10rem] mt-20 mb-5 mx-auto">
+        <h2 class="font-bold text-5xl">{ name + ", " + age }</h2>
+        <small class="text-sm">{ seniority + " " + profession }</small>
+        <Info
+            languages="Spanish - English"
+            country="Colombia - Sincelejo"
+            status="Still learning ( University )"
+        />
+        <section class="my-5">
+            <Cta
+                content='Contact me'
+                link='#'
+            />
+
+            <!-- <Cta
+            content='Contact me'
+            link='#'
+        /> -->
+        </section>
+    </div>
+</div>
+

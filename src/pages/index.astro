@@ -1,0 +1,19 @@
+---
+import Shadow from '../components/Shadow.astro';
+import MainLayout from '../layouts/MainLayout.astro'
+import HeaderInfo from '../components/HeaderInfo.astro';
+---
+
+<MainLayout name='Index Page'>
+	 <Shadow />
+	 <main class="mx-auto max-w-">
+	<HeaderInfo
+	   photo='/JulianPortfolioPhoto.jpg'
+	   name='Julian'
+	   age={18}
+	   profession='Frontend Developer'
+	   seniority='Junior'
+	/>
+	 </main>
+
+</MainLayout>
